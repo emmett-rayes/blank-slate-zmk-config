@@ -1,4 +1,4 @@
-x/*
+/*
  * Localized Keys for German
  *
  * This file was generated from data with the following license:
