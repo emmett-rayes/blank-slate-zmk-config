@@ -84,10 +84,10 @@
         layer_sym_mac {
             label = "mac_sym";
             bindings = <
-&trans  &kp DE_EXCL     &kp DE_DQT  &kp DE_SQT       &kp DE_DOLLAR  &kp DE_PRCNT  &kp DE_AMPS   &kp DE_LPAR    &kp DE_RPAR    &kp DE_LBRC   &kp DE_EQUAL  &kp DE_QMARK
-&trans  &kp DE_AT_SIGN  &de_sz      &kp DE_EURO      &kp DE_SECT    &kp DE_GT     &kp DE_LBKT   &kp RA(DE_N5)  &kp RA(DE_N6)  &kp DE_RBKT   &kp DE_PLUS   &kp DE_ASTRK
-&trans  &kp DE_CARET    &kp DE_DEG  &kp RS(DE_LBRC)  &kp DE_SLASH   &kp DE_LT     &kp RA(DE_N)  &kp DE_MU      &kp DE_HASH    &kp DE_ACUTE  &kp DE_GRAVE  &trans
-&trans  &trans          &none       &none                           &kp ENTER     &none                        &trans         &none         &trans        &trans
+&trans  &kp DE_EXCL   &kp DE_DQT  &kp DE_SQT       &kp DE_DOLLAR  &kp DE_PRCNT  &kp DE_AMPS   &kp DE_LPAR    &kp DE_RPAR    &kp DE_LBRC   &kp DE_EQUAL  &kp DE_QMARK
+&trans  &kp RA(DE_L)  &de_sz      &kp DE_EURO      &kp DE_SECT    &kp DE_GT     &kp DE_LBKT   &kp RA(DE_N5)  &kp RA(DE_N6)  &kp DE_RBKT   &kp DE_PLUS   &kp DE_ASTRK
+&trans  &kp DE_CARET  &kp DE_DEG  &kp RS(DE_LBRC)  &kp DE_SLASH   &kp DE_LT     &kp RA(DE_N)  &kp DE_MU      &kp DE_HASH    &kp DE_ACUTE  &kp DE_GRAVE  &trans
+&trans  &trans        &none       &none                           &kp ENTER     &none                        &trans         &none         &trans        &trans
             >;
         };
     };
