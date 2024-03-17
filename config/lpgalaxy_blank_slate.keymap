@@ -2,6 +2,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     chosen { zmk,matrix_transform = &dual_2u_transform; };
@@ -15,6 +16,13 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        caps_lock: caps_lock {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CAPS_LOCK";
+            #binding-cells = <0>;
+            bindings = <&kp RSHFT>, <&kp RSHFT>, <&caps_word>;
+        };
     };
 
     keymap {
@@ -25,7 +33,7 @@
             bindings = <
 &kp ESC    &kp DE_Q   &kp DE_W  &kp DE_E  &kp DE_R  &kp DE_T   &kp DE_Z  &kp DE_U  &kp DE_I       &kp DE_O    &kp DE_P         &kp DE_U_UMLAUT
 &kp TAB    &kp DE_A   &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G   &kp DE_H  &kp DE_J  &kp DE_K       &kp DE_L    &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
-&kp LSHFT  &kp DE_Y   &kp DE_X  &kp DE_C  &kp DE_V  &kp DE_B   &kp DE_N  &kp DE_M  &kp DE_COMMA   &kp DE_DOT  &kp DE_MINUS     &kp RSHFT
+&kp LSHFT  &kp DE_Y   &kp DE_X  &kp DE_C  &kp DE_V  &kp DE_B   &kp DE_N  &kp DE_M  &kp DE_COMMA   &kp DE_DOT  &kp DE_MINUS     &caps_lock
 &kp LGUI   &kp LCTRL  &mo 4     &mo 3               &kp SPACE  &mo 2               &kp BACKSPACE  &mo 5       &kp RALT         &kp ENTER
             >;
         };
@@ -54,10 +62,10 @@
         layer_num {
             label = "num";
             bindings = <
-&trans  &kp DE_N1  &kp DE_N2  &kp DE_N3   &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_N0  &kp PAGE_UP
-&trans  &kp HOME   &kp END    &kp INSERT  &none      &none      &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none      &kp PAGE_DOWN
-&trans  &none      &none      &none       &none      &none      &none      &none      &none      &none      &none      &trans
-&trans  &trans     &none      &none                  &trans     &kp DEL               &trans     &none      &trans     &trans
+&trans  &kp DE_N1  &kp DE_N2  &kp DE_N3   &kp DE_N4  &kp DE_N5  &kp DE_N6      &kp DE_N7  &kp DE_N8   &kp DE_N9  &kp DE_N0  &kp PAGE_UP
+&trans  &kp HOME   &kp END    &kp INSERT  &none      &none      &kp LEFT       &kp DOWN   &kp UP      &kp RIGHT  &none      &kp PAGE_DOWN
+&trans  &none      &none      &none       &none      &none      &none          &none      &none       &none      &none      &trans
+&trans  &trans     &none      &none                  &trans     &kp BACKSPACE             &kp DELETE  &none      &trans     &trans
             >;
         };
 
@@ -74,10 +82,10 @@
         layer_kb {
             label = "kb";
             bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &none  &none  &none  &bt BT_CLR
-&none  &none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &none
-&none  &to 0         &tog 1        &none         &none         &none         &none  &none  &none  &none  &none  &none
-&none  &none         &bootloader   &none                       &none         &none         &none  &none  &none  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &none  &none  &none         &bt BT_CLR
+&none  &none         &none         &none         &none         &none         &none  &none  &none  &none  &out OUT_USB  &out OUT_BLE
+&none  &to 0         &tog 1        &none         &none         &none         &none  &none  &none  &none  &none         &none
+&none  &none         &bootloader   &none                       &none         &none         &none  &none  &none         &none
             >;
         };
 
