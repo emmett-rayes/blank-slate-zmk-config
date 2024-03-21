@@ -38,6 +38,11 @@
             bindings = <&caps_word>;
             key-positions = <24 35>;
         };
+
+        quick_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <41 40>;
+        };
     };
 
     keymap {
