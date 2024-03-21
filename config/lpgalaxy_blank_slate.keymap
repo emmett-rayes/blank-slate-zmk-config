@@ -23,6 +23,17 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
+            tapping-term-ms = <25>;
+            quick-tap-ms = <25>;
+            flavor = "tap-preferred";
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_BEHAVIOR";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "hold-preferred";
