@@ -25,7 +25,7 @@
             #binding-cells = <0>;
             bindings = <&lt 2 BACKSPACE>, <&kp BACKSPACE>;
 
-            tapping-term-ms = <100>;
+            tapping-term-ms = <40>;
         };
 
         spc_num: spc_num {
@@ -34,7 +34,7 @@
             #binding-cells = <0>;
             bindings = <&lt 3 SPACE>, <&kp SPACE>;
 
-            tapping-term-ms = <100>;
+            tapping-term-ms = <40>;
         };
     };
 
