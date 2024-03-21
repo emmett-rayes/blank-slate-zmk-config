@@ -22,6 +22,8 @@
             label = "SYM_BSPC";
             #binding-cells = <0>;
             bindings = <&lt 2 BACKSPACE>, <&kp BACKSPACE>;
+
+            tapping-term-ms = <100>;
         };
     };
 
