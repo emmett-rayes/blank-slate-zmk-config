@@ -5,8 +5,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 &lt {
-    tapping-term-ms = <150>;
-    quick-tap-ms = <150>;
+    tapping-term-ms = <100>;
+    quick-tap-ms = <200>;
 };
 
 / {
