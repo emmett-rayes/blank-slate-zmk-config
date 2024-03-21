@@ -36,11 +36,11 @@
 &kp ESC    &kp DE_Q   &kp DE_W  &kp DE_E  &kp DE_R  &kp DE_T   &kp DE_Z  &kp DE_U  &kp DE_I       &kp DE_O    &kp DE_P         &kp DE_U_UMLAUT
 &kp TAB    &kp DE_A   &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G   &kp DE_H  &kp DE_J  &kp DE_K       &kp DE_L    &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
 &kp LSHFT  &kp DE_Y   &kp DE_X  &kp DE_C  &kp DE_V  &kp DE_B   &kp DE_N  &kp DE_M  &kp DE_COMMA   &kp DE_DOT  &kp DE_MINUS     &kp RSHIFT
-&kp LGUI   &kp LCTRL  &mo 4     &mo 3               &kp SPACE  &mo 2               &kp BACKSPACE  &mo 5       &kp RALT         &kp ENTER
+&kp LGUI   &kp LCTRL  &mo 4     &mo 3               &kp SPACE  &mo 6               &kp BACKSPACE  &mo 5       &kp RALT         &kp ENTER
             >;
         };
 
-        layer_mac {
+        layer_win {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -48,16 +48,16 @@
 &trans  &trans  &trans  &trans          &trans  &trans          &trans  &trans  &trans  &trans
             >;
 
-            label = "mac";
+            label = "win";
         };
 
         layer_sym {
             label = "sym";
             bindings = <
-&trans  &kp DE_EXCL     &kp DE_DQT  &kp DE_SQT   &kp DE_DOLLAR  &kp DE_PRCNT  &kp DE_AMPS   &kp DE_LPAR  &kp DE_RPAR  &kp DE_PIPE   &kp DE_EQUAL  &kp DE_QMARK
-&trans  &kp DE_AT_SIGN  &de_sz      &kp DE_EURO  &kp DE_SECT    &kp DE_PLUS   &kp DE_LBRC   &kp DE_LBKT  &kp DE_RBKT  &kp DE_RBRC   &kp DE_POUND  &kp DE_CARET
-&trans  &kp DE_LT       &kp DE_GT   &kp DE_BSLH  &kp DE_SLASH   &kp DE_ASTRK  &kp DE_TILDE  &kp DE_MU    &kp DE_DEG   &kp DE_ACUTE  &kp DE_GRAVE  &trans
-&trans  &trans          &none       &none                       &kp ENTER     &none                      &trans       &none         &trans        &trans
+&trans  &kp DE_EXCL   &kp DE_DQT  &kp DE_SQT       &kp DE_DOLLAR  &kp DE_PRCNT  &kp DE_AMPS   &kp DE_LPAR    &kp DE_RPAR    &kp DE_LBRC   &kp DE_EQUAL  &kp DE_QMARK
+&trans  &kp RA(DE_L)  &de_sz      &kp DE_EURO      &kp DE_SECT    &kp DE_PLUS   &kp DE_LBKT   &kp RA(DE_N5)  &kp RA(DE_N6)  &kp DE_RBKT   &kp DE_POUND  &kp DE_LT
+&trans  &kp DE_CARET  &kp DE_DEG  &kp RS(DE_LBRC)  &kp DE_SLASH   &kp DE_ASTRK  &kp RA(DE_N)  &kp DE_MU      &kp DE_GT      &kp DE_ACUTE  &kp DE_GRAVE  &trans
+&trans  &trans        &none       &none                           &kp ENTER     &none                        &trans         &none         &trans        &trans
             >;
         };
 
@@ -91,13 +91,13 @@
             >;
         };
 
-        layer_sym_mac {
-            label = "mac_sym";
+        layer_sym_win {
+            label = "sym_win";
             bindings = <
-&trans  &kp DE_EXCL   &kp DE_DQT  &kp DE_SQT       &kp DE_DOLLAR  &kp DE_PRCNT  &kp DE_AMPS   &kp DE_LPAR    &kp DE_RPAR    &kp DE_LBRC   &kp DE_EQUAL  &kp DE_QMARK
-&trans  &kp RA(DE_L)  &de_sz      &kp DE_EURO      &kp DE_SECT    &kp DE_PLUS   &kp DE_LBKT   &kp RA(DE_N5)  &kp RA(DE_N6)  &kp DE_RBKT   &kp DE_POUND  &kp DE_LT
-&trans  &kp DE_CARET  &kp DE_DEG  &kp RS(DE_LBRC)  &kp DE_SLASH   &kp DE_ASTRK  &kp RA(DE_N)  &kp DE_MU      &kp DE_GT      &kp DE_ACUTE  &kp DE_GRAVE  &trans
-&trans  &trans        &none       &none                           &kp ENTER     &none                        &trans         &none         &trans        &trans
+&trans  &kp DE_EXCL     &kp DE_DQT  &kp DE_SQT   &kp DE_DOLLAR  &kp DE_PRCNT  &kp DE_AMPS   &kp DE_LPAR  &kp DE_RPAR  &kp DE_PIPE   &kp DE_EQUAL  &kp DE_QMARK
+&trans  &kp DE_AT_SIGN  &de_sz      &kp DE_EURO  &kp DE_SECT    &kp DE_PLUS   &kp DE_LBRC   &kp DE_LBKT  &kp DE_RBKT  &kp DE_RBRC   &kp DE_POUND  &kp DE_CARET
+&trans  &kp DE_LT       &kp DE_GT   &kp DE_BSLH  &kp DE_SLASH   &kp DE_ASTRK  &kp DE_TILDE  &kp DE_MU    &kp DE_DEG   &kp DE_ACUTE  &kp DE_GRAVE  &trans
+&trans  &trans          &none       &none                       &kp ENTER     &none                      &trans       &none         &trans        &trans
             >;
         };
     };
@@ -105,7 +105,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        mac_sym {
+        win_sym {
             if-layers = <1 2>;
             then-layer = <6>;
         };
