@@ -17,18 +17,9 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        bspc_sym: bspc_sym {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BSPC_SYM";
-            #binding-cells = <0>;
-            bindings = <&lt 2 BACKSPACE>, <&kp BACKSPACE>;
-
-            tapping-term-ms = <100>;
-        };
-
-        tap_layer: tap_layer {
+        m_layer_tap: m_layer_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "TAP_LAYER";
+            label = "M_LAYER_TAP";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
@@ -52,10 +43,10 @@
         layer_base {
             label = "base";
             bindings = <
-&kp ESC    &kp DE_Q   &kp DE_W  &kp DE_E  &kp DE_R  &kp DE_T     &kp DE_Z                &kp DE_U  &kp DE_I       &kp DE_O    &kp DE_P         &kp DE_U_UMLAUT
-&kp TAB    &kp DE_A   &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G     &kp DE_H                &kp DE_J  &kp DE_K       &kp DE_L    &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
-&kp LSHFT  &kp DE_Y   &kp DE_X  &kp DE_C  &kp DE_V  &kp DE_B     &kp DE_N                &kp DE_M  &kp DE_COMMA   &kp DE_DOT  &kp DE_MINUS     &kp RSHIFT
-&kp LGUI   &kp LCTRL  &mo 4     &mo 3               &lt 3 SPACE  &tap_layer 2 BACKSPACE            &kp BACKSPACE  &mo 5       &kp LALT         &kp ENTER
+&kp ESC    &kp DE_Q   &kp DE_W  &kp DE_E  &kp DE_R  &kp DE_T              &kp DE_Z                  &kp DE_U  &kp DE_I       &kp DE_O    &kp DE_P         &kp DE_U_UMLAUT
+&kp TAB    &kp DE_A   &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G              &kp DE_H                  &kp DE_J  &kp DE_K       &kp DE_L    &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
+&kp LSHFT  &kp DE_Y   &kp DE_X  &kp DE_C  &kp DE_V  &kp DE_B              &kp DE_N                  &kp DE_M  &kp DE_COMMA   &kp DE_DOT  &kp DE_MINUS     &kp RSHIFT
+&kp LGUI   &kp LCTRL  &mo 4     &mo 3               &m_layer_tap 3 SPACE  &m_layer_tap 2 BACKSPACE            &kp BACKSPACE  &mo 5       &kp LALT         &kp ENTER
             >;
         };
 
