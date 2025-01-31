@@ -4,11 +4,9 @@ manifest:
       url-base: https://github.com/petejohanson
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: emmett-rayes
-      url-base: https://github.com/emmett-rayes
   projects:
     - name: zmk
-      remote: emmett-rayes
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
     - name: blank-slate-zmk-module
