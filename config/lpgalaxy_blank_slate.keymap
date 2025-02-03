@@ -93,8 +93,8 @@
             label = "fn";
             bindings = <
 &trans  &kp F1        &kp F2        &kp F3      &kp F4  &kp F5  &kp F6      &kp F7            &kp F8      &kp F9      &kp F10  &kp F11
-&trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &none   &none   &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_STOP  &kp C_NEXT  &kp F13  &kp F12
-&trans  &kp C_BRI_DN  &kp C_BRI_UP  &none       &none   &none   &none       &none             &none       &none       &kp F14  &trans
+&trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &none   &none   &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_STOP  &kp C_NEXT  &kp F23  &kp F12
+&trans  &kp C_BRI_DN  &kp C_BRI_UP  &none       &none   &none   &none       &none             &none       &none       &kp F24  &trans
 &trans  &trans        &none         &none               &none   &none                         &none       &none       &trans   &trans
             >;
         };
