@@ -35,7 +35,7 @@
         compatible = "zmk,combos";
 
         caps_lock {
-            bindings = <&caps_word>;
+            bindings = <&kp CAPSLOCK>;
             key-positions = <24 35>;
         };
 
